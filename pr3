@@ -1,0 +1,134 @@
+// Завдання 1
+let num1 = parseFloat(prompt("Введіть перше число:"));
+let num2 = parseFloat(prompt("Введіть друге число:"));
+
+if (isNaN(num1) || isNaN(num2)) {
+  console.log("Будь ласка, введіть коректні числа.");
+} else {
+   let sum = num1 + num2;
+  let difference = num1 - num2;
+  let product = num1 * num2;
+  let quotient = num1 / num2;
+  let remainder = num1 % num2;
+
+  console.log("Результати:");
+  console.log("Додавання: " + sum);
+  console.log("Віднімання: " + difference);
+  console.log("Множення: " + product);
+  console.log("Ділення: " + quotient);
+  console.log("Залишок від ділення: " + remainder);
+}
+
+// Завдання 2
+let age = parseInt(prompt("Введіть ваш вік:"));
+
+if (isNaN(age)) {
+  console.log("Будь ласка, введіть коректний вік.");
+} else {
+  let isAdult = age >= 18;
+
+  console.log("Ви повнолітній: " + isAdult);
+}
+
+// Завдання 3
+let hasMembership = confirm("У вас є абонемент?"); 
+let balance = parseFloat(prompt("Скільки грошей на рахунку?:"));
+
+if (isNaN(balance)) {
+  console.log("Будь ласка, введіть коректний баланс.");
+} else {
+  let hasAccess = hasMembership || balance > 100;
+
+  if (hasAccess) {
+    console.log("Доступ дозволено");
+  } else {
+    console.log("Доступ заборонено");
+  }
+}
+
+// Завдання 4
+let number = parseInt(prompt("Введіть число:"));
+
+if (isNaN(number)) {
+  console.log("Будь ласка, введіть коректне число.");
+} else {
+  let parity = number % 2 === 0 ? "парне" : "непарне";
+
+  console.log("Число " + parity);
+}
+
+// Завдання 5
+let initialBalance = parseFloat(prompt("Ваш початковий баланс:"));
+
+if (isNaN(initialBalance)) {
+  console.log("Будь ласка, введіть коректний баланс.");
+} else {
+  let balance = initialBalance;
+  balance += 500; 
+  console.log("Поповнено на 500 грн");
+  balance -= 200; 
+  console.log("Знято 200 грн");
+  let interest = balance * 0.05; 
+  balance += interest;
+  console.log("Нараховано 5%: " + interest.toFixed(2) + " грн");
+
+  console.log("Підсумковий баланс: " + balance.toFixed(2) + " грн");
+}
+
+// Завдання 6
+let dayNumber = parseInt(prompt("Введіть число (1-7):"));
+
+if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 7) {
+  console.log("Будь ласка, введіть число від 1 до 7.");
+} else {
+  let dayName;
+  switch (dayNumber) {
+    case 1:
+      dayName = "понеділок";
+      break;
+    case 2:
+      dayName = "вівторок";
+      break;
+    case 3:
+      dayName = "середа";
+      break;
+    case 4:
+      dayName = "четвер";
+      break;
+    case 5:
+      dayName = "п'ятниця";
+      break;
+    case 6:
+      dayName = "субота";
+      break;
+    case 7:
+      dayName = "неділя";
+      break;
+    default:
+      dayName = "невідомий день";
+  }
+
+  console.log("Це " + dayName);
+}
+
+// Завдання 7
+
+let num1 = parseInt(prompt("Введіть перше число:"));
+let num2 = parseInt(prompt("Введіть друге число:"));
+
+if (isNaN(num1) || isNaN(num2)) {
+  console.log("Будь ласка, введіть коректні числа.");
+} else {
+  let bitwiseAnd = num1 & num2;
+  let bitwiseOr = num1 | num2;
+  let bitwiseXor = num1 ^ num2;
+  let leftShift = num1 << 1;
+  let rightShift = num1 >> 1;
+
+  console.log("Результати:");
+  console.log(num1 + " & " + num2 + " = " + bitwiseAnd);
+  console.log(num1 + " | " + num2 + " = " + bitwiseOr);
+  console.log(num1 + " ^ " + num2 + " = " + bitwiseXor);
+  console.log(num1 + " << 1 = " + leftShift);
+  console.log(num1 + " >> 1 = " + rightShift);
+}
