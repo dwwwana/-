@@ -1,0 +1,89 @@
+let name = "Діана";
+let city = name;
+console.log(city);
+
+
+
+let name2 = "Аріана";
+console.log(`привіт ${1}`);
+console.log(`привіт ${"name2"}`);
+console.log(`привіт ${name2}`);
+
+
+
+let a = "5";
+let b = "13cvb";
+let c = "12.9sxdcfgv";
+
+let numA = parseInt(a);
+let numB = parseInt(b);
+let numC = parseFloat(c);
+
+console.log(typeof numA);
+console.log(typeof numB);
+console.log(typeof numC);
+
+console.log(numA);
+console.log(numB);
+console.log(numC);
+
+
+
+console.log((0.1 + 0.2).toFixed(1));
+console.log(Number((0.1 + 0.2).toFixed(1)));
+console.log(Math.round((0.1 + 0.2) * 10) / 10);
+
+
+let numbers = [30, 10, 50, 40];
+let maxNumber = Math.max(...numbers);
+
+console.log(maxNumber);
+
+
+
+let randomNumber = Math.floor(Math.random() * 3) + 2;
+
+console.log(randomNumber);
+
+
+
+const message = "Welcome to Tahiti!";
+let messageLength = message.length;
+
+console.log(messageLength);
+
+
+
+const message2 = "Welcome to Tahiti!";
+let uppercaseMessage = message2.toUpperCase();
+
+console.log(uppercaseMessage);
+
+
+
+let person = {};
+
+person.name = "Jonathan";
+person.age = 25;
+person.city = "Kiyv";
+
+console.log(person);
+
+delete person.city;
+
+person["like flowers"] = true;
+
+console.log(person);
+
+
+
+let person2 = {
+    name: "Gordon",
+    age: 24,
+    city: "City 17",
+    isStudent: false
+  };
+
+  for (let key in person2) {
+    console.log(`Key: ${key}, Value: ${person2[key]}`);
+  }
